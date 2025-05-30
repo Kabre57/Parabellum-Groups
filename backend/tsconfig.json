@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    /* Langage et compatibilité */
+    "target": "ES2016",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    
+    /* Répertoires */
+    "rootDir": "src",
+    "outDir": "dist",
+    
+    /* Interopérabilité & modules */
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+
+    /* Strict et qualité */
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    /* Source maps */
+    "sourceMap": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "tests"]
+}

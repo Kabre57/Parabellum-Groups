@@ -1,0 +1,22 @@
+### Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "secret"
+}
+
+### Get all clients
+GET http://localhost:3000/clients
+Authorization: Bearer {{token}}
+
+### Create client
+POST http://localhost:3000/clients
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Client 1",
+  "email": "client1@example.com"
+}

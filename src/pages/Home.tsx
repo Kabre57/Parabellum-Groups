@@ -5,10 +5,21 @@ import { ChevronDown, ArrowRight, Calendar, Target, Users } from 'lucide-react';
 const Home = () => {
   return (
     <>
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-        {/* Background Effects */}
-        <div className="absolute inset-0">
+      {/* Hero Section avec l'image d'arrière-plan */}
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+        {/* Image d'arrière-plan avec le bon chemin */}
+        <div className="absolute inset-0 z-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url('/Video/acceuil.avif')` }}
+          >
+            {/* Overlay pour améliorer la lisibilité */}
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-blue-900/70 to-slate-800/80"></div>
+          </div>
+        </div>
+
+        {/* Effets d'arrière-plan supplémentaires */}
+        <div className="absolute inset-0 z-1">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
         </div>
@@ -45,7 +56,7 @@ const Home = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
           <ChevronDown className="w-8 h-8 text-white/60" />
         </div>
       </section>

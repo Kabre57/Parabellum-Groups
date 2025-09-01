@@ -1,5 +1,6 @@
 import React from 'react';
 import { Cpu, Wheat, Home, Activity, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Structures = () => {
   const structures = [
@@ -111,12 +112,22 @@ const Structures = () => {
                     </p>
 
                     <button className="group/btn flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors">
+                    <Link 
+                      to={`/structures/${
+                        structure.name === 'Progiteck' ? 'progiteck' :
+                        structure.name === 'Parabellum Agri' ? 'parabellum-agri' :
+                        structure.name === 'SOAN' ? 'soan' : 'biomed-tech'
+                      }`}
+                      className="group/btn flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+                    >
                       <span>En savoir plus</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
                     </button>
                   </div>
                 </div>
-              ))}
+              ))
+              }
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@ import About from './pages/About';
 import Vision from './pages/Vision';
 import Projects from './pages/Projects';
 import Structures from './pages/Structures';
+import StructureDetail from './pages/StructureDetail';
 import Contact from './pages/Contact';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/vision" element={<Vision />} />
             <Route path="/projets" element={<Projects />} />
             <Route path="/structures" element={<Structures />} />
+            <Route path="/structures/:id" element={<StructureDetail />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
